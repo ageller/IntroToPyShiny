@@ -18,16 +18,27 @@ working from examples here https://shinylive.io/py/examples/
 '''
 
 # this section defines the layout
-app_ui = ui.page_fluid(
+app_ui = ui.page_sidebar(
 
     # could include a title and description here (will do that later)
 
-    # UI can be included here (will do that later)
+    # UI 
+    ui.sidebar(
+        ui.input_radio_buttons(
+            "eCol", "Attribute for earthquake data", {"mag": "Magnitude", "depth": "Depth (km)"}
+        ),
+        ui.input_radio_buttons(
+            "vCol", "Attribute for volcano data", {"elevation": "Elevation (m)", "population_within_100_km" : "Population within 100km"}
+        ),
+        width = 300, bg = 'lightgray'
+    ),
 
     # plots
-    ui.row(
-        ui.column(6, ui.output_plot("ehist")),
-        ui.column(6, ui.output_plot("vhist")),
+    ui.card(
+        ui.row(
+            ui.column(6, ui.output_plot("ehist")),
+            ui.column(6, ui.output_plot("vhist")),
+        )
     )
 )
 
@@ -39,21 +50,19 @@ def server(input, output, session):
     @output
     @render.plot()
     def ehist():
-        col = 'depth'
         fig, ax = plt.subplots()
-        ax.hist(edf[col], bins = 25, color = [13/255., 106/255., 255/255.])
+        ax.hist(edf[input.eCol()], bins = 25, color = [13/255., 106/255., 255/255.])
         ax.set_ylabel('N')
-        ax.set_xlabel(f'Earthquake {col}')
+        ax.set_xlabel(f'Earthquake {input.eCol()}')
         return fig
     
     @output
     @render.plot()
     def vhist():
-        col = 'population_within_100_km'
         fig, ax = plt.subplots()
-        ax.hist(vdf[col], bins = 25, color = [255/255., 29/255., 13/255.])
+        ax.hist(vdf[input.vCol()], bins = 25, color = [255/255., 29/255., 13/255.])
         ax.set_ylabel('N')
-        ax.set_xlabel(f'Volcano {col}')
+        ax.set_xlabel(f'Volcano {input.vCol()}')
         return fig  
 
 # define the app    

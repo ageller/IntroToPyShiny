@@ -24,7 +24,7 @@ app_ui = ui.page_fluid(
 
     # UI can be included here (will do that later)
 
-    # plots, 2 histograms
+    # plots
     ui.row(
         ui.column(6, ui.output_plot("ehist")),
     )

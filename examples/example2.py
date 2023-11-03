@@ -24,16 +24,12 @@ app_ui = ui.page_fluid(
 
     # UI 
     ui.panel_well(
-        ui.row(
-            ui.column(4, 
-                ui.input_radio_buttons(
-                    "eCol", "Attribute for earthquake data", {"mag": "Magnitude", "depth": "Depth (km)"}
-                ),
-            ),
+        ui.input_radio_buttons(
+            "eCol", "Attribute for earthquake data", {"mag": "Magnitude", "depth": "Depth (km)"}
         ),
     ),
 
-    # plots, 2 histograms
+    # plots
     ui.row(
         ui.column(6, ui.output_plot("ehist")),
         ui.column(6, ui.output_plot("vhist")),
