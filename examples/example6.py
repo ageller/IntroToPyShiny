@@ -67,8 +67,8 @@ app_ui = ui.page_sidebar(
     # plots
     # scatter plot
     ui.card(
-        ui.output_plot("evscatter")
-    ),
+        ui.output_plot("evscatter"),
+   ),
 
     # 2 histograms
     ui.card(
@@ -76,16 +76,17 @@ app_ui = ui.page_sidebar(
             ui.column(6, 
                 ui.panel_conditional(
                     "input.toggle.includes('Earthquakes')",
-                    ui.output_plot("ehist")
+                    ui.output_plot("ehist", height = 260)
                 ),
             ),
             ui.column(6, 
                 ui.panel_conditional(
                     "input.toggle.includes('Volcanoes')",
-                    ui.output_plot("vhist")
+                    ui.output_plot("vhist", height = 260)
                 ),
             ),
         ),
+        height = 450,
     )
 
 )

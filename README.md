@@ -7,6 +7,8 @@ In this workshop, we will build an app that is similar to [this version on shiny
 
 Earthquake data come from the USGS and were downloaded [here](https://www.kaggle.com/datasets/thedevastator/uncovering-geophysical-insights-analyzing-usgs-e), and volcano data come The Simithsonian Institute and were downloaded from [here](https://www.kaggle.com/datasets/jessemostipak/volcano-eruptions).
 
+You can access the presentation [on Google Slides here](https://docs.google.com/presentation/d/1XEwFZRhWh1zjKL4oQAqYKrUFbs1Ij8wT/edit?usp=sharing&ouid=100526071325620132362&rtpof=true&sd=true). 
+
 
 ## Running locally
 
@@ -14,7 +16,7 @@ If you want to run the examples locally, you can clone this repo and follow thes
 
 1. I recommend creating a conda environment.  
 ```
-conda create --name shinyTest python=3.10 shiny pandas matplotlib cartopy
+conda create --name shinyTest python shiny pandas matplotlib cartopy
 conda activate shinyTest
 ```
 
