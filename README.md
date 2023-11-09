@@ -10,18 +10,20 @@ Earthquake data come from the USGS and were downloaded [here](https://www.kaggle
 
 ## Running locally
 
-If you want to run this app locally, you can clone this repo and follow these steps:
+If you want to run the examples locally, you can clone this repo and follow these steps:
 
-1. I recommend creating a conda environment.  I am using Python version 3.9.13 because that is currently one of the (few) available version on shinyapps.io.  Note that for the plotly widget to work with this version of Python, you need to specify the version of ipywidgets. (Otherwise, the app will encounter an error.  See some discussion [here](https://github.com/rstudio/py-shinywidgets/issues/79). Perhaps this will be fixed in a future version of py-shinywidgets):
+1. I recommend creating a conda environment.  
 ```
-conda create --name shinyTest python=3.10 shiny pandas matplotlib
+conda create --name shinyTest python=3.10 shiny pandas matplotlib cartopy
 conda activate shinyTest
 ```
 
-2. Run  the app with 
+2. Withing the `examples/` directory Run  the app with 
 ```
 cd app
-shiny run --reload app.py
+shiny run --reload example1_1.py
 ```
+
+(and replace `example1_1.py` with the file that you want to run)
 
 3. Point your browser to http://127.0.0.1:8000/ to view your app.
