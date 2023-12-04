@@ -1,5 +1,5 @@
-# Intro To PyShiny
-An introductory workshop on Python + Shiny
+# Intro To Shiny for Python
+Shiny lets you build interactive dashboards and websites without knowing HTML, CSS, or Javascript. Create tools for yourself, or share your data, analysis, and visualizations with the world through simple apps and interfaces. This workshops introduces Shiny for Python (yes Python!).  You will learn how to build and deploy a basic Shiny app, with multiple figures and a user interface containing widgets that control the figure content.
 
 I originally developed some materials for this workshop in my [disasterShinyPy GitHub repo](https://github.com/ageller/disasterShinyPy).  You can also read about my initial experience with Python + Shiny on my blog post [here](https://sites.northwestern.edu/researchcomputing/2023/04/12/experimenting-with-shiny-for-python/).
 
