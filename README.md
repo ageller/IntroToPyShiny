@@ -22,7 +22,6 @@ conda activate shinyTest
 
 2. Withing the `examples/` directory Run  the app with 
 ```
-cd app
 shiny run --reload example1_1.py
 ```
 
