@@ -20,7 +20,7 @@ conda create --name shinyTest python shiny pandas matplotlib cartopy
 conda activate shinyTest
 ```
 
-2. Withing the `examples/` directory Run  the app with 
+2. Withing the `examples/` directory run the app with 
 ```
 shiny run --reload example1_1.py
 ```
