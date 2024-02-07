@@ -22,7 +22,7 @@ If you want to run the examples locally, you can clone this repo and follow thes
 
 2. Withing the `examples/` directory run the app with 
     ```
-    shiny run --reload example1_1.py
+    shiny run --reload example1.py
     ```
 
     (and replace `example1_1.py` with the file that you want to run)
