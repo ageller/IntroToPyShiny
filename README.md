@@ -25,6 +25,6 @@ If you want to run the examples locally, you can clone this repo and follow thes
     shiny run --reload example1.py
     ```
 
-    (and replace `example1_1.py` with the file that you want to run)
+    (and replace `example1.py` with the file that you want to run)
 
 3. Point your browser to http://127.0.0.1:8000/ to view your app.
