@@ -20,7 +20,7 @@ If you want to run the examples locally, you can clone this repo and follow thes
     conda activate shinyTest
     ```
 
-   If `shiny` is not available for you on `conda` (e.g., it may not be available for mac users yet).  Please remove `shiny` from the conda command above and then after activating the environment, install `shiny` with `pip` using the command `pip install shiny`.
+   If `shiny` is not available for you on `conda` (e.g., it may not be available for mac users yet).  Please remove `shiny` from the `conda` command above, and then after activating the environment, install `shiny` with `pip` using the command `pip install shiny`.
 
 2. Withing the `examples/` directory run the app with 
     ```
